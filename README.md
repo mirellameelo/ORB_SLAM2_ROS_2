@@ -42,7 +42,6 @@ sudo apt-get install -y \
 pip3 install -U python3-colcon-common-extensions 
 ```
 
-
 ``` bash
   python3 -m pip install -U \
 	  pytest \
@@ -97,8 +96,7 @@ sudo make install
 ## ROS 2
 
 ```bash
-mkdir -p $HOME/ros2_sdk/src
-cd $HOME/ros2_sdk
+mkdir -p $HOME/ros2_sdk/src && cd $HOME/ros2_sdk
 wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
 vcs import src < ros2.repos
 sudo rosdep init
