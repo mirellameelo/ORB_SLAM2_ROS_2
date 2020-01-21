@@ -96,6 +96,28 @@ sudo make install
 ## ROS 2
 
 ```bash
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+```
+
+```bash
+sudo apt update && sudo apt install curl gnupg2 lsb-release
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+```
+
+```bash
+sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
+```
+
+```bash
+sudo apt install --no-install-recommends -y \
+  libasio-dev \
+  libtinyxml2-dev
+```
+
+
+```bash
 mkdir -p $HOME/ros2_sdk/src && cd $HOME/ros2_sdk
 wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
 vcs import src < ros2.repos
