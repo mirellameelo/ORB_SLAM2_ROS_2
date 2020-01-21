@@ -13,6 +13,33 @@
 
 The following libs eventually will be necessary. You can install then as you need, or just run the command:
 
+```bash 
+sudo apt-get install -y \
+	build-essential \
+	git \
+	wget \
+	curl \
+	vim \
+	nano \
+	cmake \
+	python3-dev \
+	python3-pip \
+	python3-numpy \
+	python-rosdep2 \
+	python3-colcon-common-extensions \
+	libgtk-3-dev \
+	libglew-dev \
+	libgl1-mesa-dev \
+	pkg-config \
+	libpython2.7-dev \
+	ffmpeg \
+	libboost-dev \
+	libboost-system-dev \
+	libcanberra-gtk-module \
+	software-properties-common \
+```
+
+
 ``` bash
   python3 -m pip install -U \
 	  pytest \
@@ -31,34 +58,6 @@ The following libs eventually will be necessary. You can install then as you nee
 	  flake8-quotes \
 	  pytest-repeat \
 	  pytest-rerunfailures
-```
-
-```bash 
-sudo apt-get install -y \
-	build-essential \
-	git \
-	wget \
-	curl \
-	vim \
-	nano \
-	cmake \
-	python3-colcon-common-extensions \
-	python3-pip \
-	python3-numpy \
-	python-rosdep \
-	python3-vcstool \
-	python3-dev \
-	libgtk-3-dev \
-	libglew-dev \
-	libgl1-mesa-dev \
-	pkg-config \
-	libpython2.7-dev \
-	ffmpeg \
-	libboost-dev \
-	libboost-system-dev \
-	libcanberra-gtk-module \
-	software-properties-common \
-	ipython 
 ```
 
 ## Eigen3
