@@ -11,9 +11,6 @@
 - ORB_SLAM2
 - Pangolin
 
-
-## install additional ubuntu 18.04 requirements
-
 The following libs eventually will be necessary. You can install then as you need, or just run the command:
 
 ```bash 
