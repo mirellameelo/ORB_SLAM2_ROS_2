@@ -63,7 +63,7 @@ sudo apt-get install -y \
 	  flake8-quotes \
 	  pytest-repeat \
 	  pytest-rerunfailures
-	  ```
+```
 
 ## Eigen3
 
