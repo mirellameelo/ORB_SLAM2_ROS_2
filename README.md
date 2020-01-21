@@ -154,7 +154,7 @@ make install
 ```
 
 
-## Set environment
+## Set the environment
 
 -  You can add the following lines in: $HOME/.bashrc or run it **every time you open a new terminal**
 
