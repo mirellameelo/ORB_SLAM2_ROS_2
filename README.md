@@ -88,7 +88,7 @@ cmake --build .
 cd $HOME
 git clone https://github.com/opencv/opencv.git
 mkdir -p $HOME/opencv/build && cd $HOME/opencv/build 
-cmake ../
+cmake ..
 make 
 sudo make install
 ```
