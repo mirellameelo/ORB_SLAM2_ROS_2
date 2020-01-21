@@ -13,6 +13,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
@@ -20,7 +21,7 @@ find_package(cv_bridge REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(Pangolin REQUIRED)
 
-set(ORB_SLAM2_DIR /root/ORB_SLAM2)
+set(ORB_SLAM2_DIR ${HOME}/ORB_SLAM2)
 
 include_directories(${ORB_SLAM2_DIR}/include)
 include_directories(${ORB_SLAM2_DIR})
