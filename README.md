@@ -21,12 +21,11 @@ sudo apt-get install -y \
 	curl \
 	vim \
 	nano \
-	cmake \
+	cmake \	
 	python3-dev \
 	python3-pip \
 	python3-numpy \
 	python-rosdep2 \
-	python3-colcon-common-extensions \
 	libgtk-3-dev \
 	libglew-dev \
 	libgl1-mesa-dev \
@@ -37,6 +36,10 @@ sudo apt-get install -y \
 	libboost-system-dev \
 	libcanberra-gtk-module \
 	software-properties-common \
+```
+
+```bash
+pip3 install -U python3-colcon-common-extensions 
 ```
 
 
@@ -63,11 +66,11 @@ sudo apt-get install -y \
 ## Eigen3
 
 ```bash
+cd $HOME
 git clone -b 3.2 --single-branch  https://gitlab.com/libeigen/eigen.git
-mkdir -p $HOME/eigen/build
-cd $HOME/eigen/build
+mkdir -p $HOME/eigen/build && cd $HOME/eigen/build
 cmake ..
-make install
+sudo make install
 ```
 
 ## Pangolin 
@@ -75,8 +78,7 @@ make install
 ```bash
 cd $HOME
 git clone https://github.com/stevenlovegrove/Pangolin.git
-mkdir -p $HOME/Pangolin/build
-cd $HOME/Pangolin/build
+mkdir -p $HOME/Pangolin/build && cd $HOME/Pangolin/build
 cmake ..
 cmake --build .
 ```
