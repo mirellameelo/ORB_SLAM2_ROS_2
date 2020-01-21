@@ -108,8 +108,7 @@ colcon build --symlink-install
 ## ORB_SLAM2_ROS_2
 
 ``` bash
-mkdir -p $HOME/ws/src
-cd $HOME/ws/src
+mkdir -p $HOME/ws/src && cd $HOME/ws/src
 git clone https://github.com/mirellameelo/ORB_SLAM2_ROS_2.git
 git clone -b ros2 https://github.com/ros-perception/vision_opencv.git src/vision_opencv
 git clone https://github.com/ros2/message_filters src/message_filters
