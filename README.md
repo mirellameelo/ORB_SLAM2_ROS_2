@@ -42,10 +42,6 @@ sudo apt-get install -y \
 	software-properties-common \
 ```
 
-```bash
-pip3 install -U python3-colcon-common-extensions 
-```
-
 ## Eigen3
 
 ```bash
@@ -71,6 +67,7 @@ cmake --build .
 ``` bash
 cd $HOME
 git clone https://github.com/opencv/opencv.git
+
 git clone https://github.com/opencv/opencv --branch 3.2.0
 
 mkdir -p $HOME/opencv/build && cd $HOME/opencv/build 
@@ -102,7 +99,6 @@ sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `ls
 sudo apt update && sudo apt install -y \
   python3-colcon-common-extensions \
   python3-vcstool \
-
 ```
   
 ``` bash
@@ -123,8 +119,6 @@ sudo apt update && sudo apt install -y \
 	  flake8-quotes \
 	  pytest-repeat \
 	  pytest-rerunfailures
-```
-
 ```
 
 
