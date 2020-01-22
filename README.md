@@ -102,23 +102,23 @@ sudo apt update && sudo apt install -y \
 ```
   
 ``` bash
-  python3 -m pip install -U \
-	  pytest \
-	  pytest-cov \
-	  pytest-runner \
-	  setuptools \
-	  argcomplete \
-	  flake8 \
-	  flake8-blind-except \
-	  flake8-builtins \
-	  flake8-class-newline \
-	  flake8-comprehensions \
-	  flake8-deprecated \
-	  flake8-docstrings \
-	  flake8-import-order \
-	  flake8-quotes \
-	  pytest-repeat \
-	  pytest-rerunfailures
+python3 -m pip install -U \
+	pytest \
+	pytest-cov \
+	pytest-runner \
+	setuptools \
+	argcomplete \
+	flake8 \
+	flake8-blind-except \
+	flake8-builtins \
+	flake8-class-newline \
+	flake8-comprehensions \
+	flake8-deprecated \
+	flake8-docstrings \
+	flake8-import-order \
+	flake8-quotes \
+	pytest-repeat \
+	pytest-rerunfailures
 ```
 
 ```bash
