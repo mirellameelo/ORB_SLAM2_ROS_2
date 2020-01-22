@@ -24,7 +24,7 @@ sudo apt-get update && sudo apt-get install -y \
 	curl \
 	vim \
 	nano \
-	cmake \	
+	cmake 
 ```	
 
 ```bash 
@@ -42,7 +42,7 @@ sudo apt-get install -y \
 	libboost-dev \
 	libboost-system-dev \
 	libcanberra-gtk-module \
-	software-properties-common \
+	software-properties-common
 ```
 
 ## Eigen3
@@ -137,6 +137,23 @@ rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys 
 colcon build --symlink-install
 ```
 
+
+## ORB_SLAM2_ROS2 
+
+``` bash
+mkdir -p $HOME/ws/src && cd $HOME/ws/src
+git clone https://github.com/mirellameelo/ORB_SLAM2_ROS_2.git
+git clone -b ros2 https://github.com/ros-perception/vision_opencv.git src/vision_opencv
+git clone https://github.com/ros2/message_filters src/message_filters
+```
+
+Before executing the following commands, execute all the "ORB_SLAM2" section.
+
+``` bash
+source $HOME/ros2_sdk/install/setup.sh 
+colcon build
+```
+
 ## ORB_SLAM2
 
 ```bash 
@@ -161,23 +178,11 @@ tar -xf ORBvoc.txt.tar.gz
 cd ..
 mkdir build && cd build
 cmake .. \
-  -DROS_BUILD_TYPE=Release \
-  -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3 \
-  -DCMAKE_CXX_STANDARD_LIBRARIES="-lboost_system"
+	-DROS_BUILD_TYPE=Release \
+	-DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3 \
+	-DCMAKE_CXX_STANDARD_LIBRARIES="-lboost_system"
 make -j
 make install
-```
-
-
-## ORB_SLAM2_ROS_2
-
-``` bash
-mkdir -p $HOME/ws/src && cd $HOME/ws/src
-git clone https://github.com/mirellameelo/ORB_SLAM2_ROS_2.git
-git clone -b ros2 https://github.com/ros-perception/vision_opencv.git src/vision_opencv
-git clone https://github.com/ros2/message_filters src/message_filters
-source $HOME/ros2_sdk/install/setup.sh 
-colcon build
 ```
 
 ## Set the environment
