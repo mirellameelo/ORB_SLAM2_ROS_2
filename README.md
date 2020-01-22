@@ -95,7 +95,8 @@ sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `ls
 
 wget, python-rosdep, python3-pip, build-essential, cmake and git are necessary. If you had jumped "general dependencies" section, please, add them in the following command. 
   
- ```bash
+ 
+```bash
 sudo apt update && sudo apt install -y \
 	python3-colcon-common-extensions \
 	python3-vcstool
