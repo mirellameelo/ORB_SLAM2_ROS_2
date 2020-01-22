@@ -71,6 +71,8 @@ cmake --build .
 ``` bash
 cd $HOME
 git clone https://github.com/opencv/opencv.git
+git clone https://github.com/opencv/opencv --branch 3.2.0
+
 mkdir -p $HOME/opencv/build && cd $HOME/opencv/build 
 cmake ..
 make 
