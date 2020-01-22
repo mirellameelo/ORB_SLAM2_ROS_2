@@ -14,7 +14,7 @@
 The following libs eventually will be necessary. You can install then as you need, or just run the command:
 
 ```bash 
-sudo apt-get install -y \
+sudo apt-get update && sudo apt-get install -y \
 	build-essential \
 	git \
 	wget \
@@ -22,6 +22,10 @@ sudo apt-get install -y \
 	vim \
 	nano \
 	cmake \	
+```	
+
+```bash 
+sudo apt-get install -y \
 	python3-dev \
 	python3-pip \
 	python3-numpy \
@@ -40,26 +44,6 @@ sudo apt-get install -y \
 
 ```bash
 pip3 install -U python3-colcon-common-extensions 
-```
-
-``` bash
-  python3 -m pip install -U \
-	  pytest \
-	  pytest-cov \
-	  pytest-runner \
-	  setuptools \
-	  argcomplete \
-	  flake8 \
-	  flake8-blind-except \
-	  flake8-builtins \
-	  flake8-class-newline \
-	  flake8-comprehensions \
-	  flake8-deprecated \
-	  flake8-docstrings \
-	  flake8-import-order \
-	  flake8-quotes \
-	  pytest-repeat \
-	  pytest-rerunfailures
 ```
 
 ## Eigen3
@@ -109,6 +93,38 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 ```bash
 sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
 ```
+
+  wget   python-rosdep   python3-pip  build-essential   cmake   git 
+  
+ ```bash
+sudo apt update && sudo apt install -y \
+  python3-colcon-common-extensions \
+  python3-vcstool \
+
+```
+  
+``` bash
+  python3 -m pip install -U \
+	  pytest \
+	  pytest-cov \
+	  pytest-runner \
+	  setuptools \
+	  argcomplete \
+	  flake8 \
+	  flake8-blind-except \
+	  flake8-builtins \
+	  flake8-class-newline \
+	  flake8-comprehensions \
+	  flake8-deprecated \
+	  flake8-docstrings \
+	  flake8-import-order \
+	  flake8-quotes \
+	  pytest-repeat \
+	  pytest-rerunfailures
+```
+
+```
+
 
 ```bash
 sudo apt install --no-install-recommends -y \
