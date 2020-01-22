@@ -6,12 +6,15 @@
 ## Dependecies
 
 - Eigen 3.2 (upper versions bring up incompatibilities)
-- OpenCV 3.X
+- OpenCV
 - ROS 2 (dashing)
 - ORB_SLAM2
 - Pangolin
 
-The following libs eventually will be necessary. You can install then as you need, or just run the command:
+
+##### General dependencies
+
+The following dependencies eventually will be necessary. You can install then as you need, or just run the command:
 
 ```bash 
 sudo apt-get update && sudo apt-get install -y \
@@ -67,9 +70,6 @@ cmake --build .
 ``` bash
 cd $HOME
 git clone https://github.com/opencv/opencv.git
-
-git clone https://github.com/opencv/opencv --branch 3.2.0
-
 mkdir -p $HOME/opencv/build && cd $HOME/opencv/build 
 cmake ..
 make 
@@ -93,12 +93,12 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
 ```
 
-  wget   python-rosdep   python3-pip  build-essential   cmake   git 
+wget, python-rosdep, python3-pip, build-essential, cmake and git are necessary. If you had jumped "general dependencies" section, please, add them in the following command. 
   
  ```bash
 sudo apt update && sudo apt install -y \
-  python3-colcon-common-extensions \
-  python3-vcstool \
+	python3-colcon-common-extensions \
+	python3-vcstool
 ```
   
 ``` bash
@@ -121,13 +121,11 @@ sudo apt update && sudo apt install -y \
 	  pytest-rerunfailures
 ```
 
-
 ```bash
 sudo apt install --no-install-recommends -y \
-  libasio-dev \
-  libtinyxml2-dev
+	libasio-dev \
+	libtinyxml2-dev
 ```
-
 
 ```bash
 mkdir -p $HOME/ros2_sdk/src && cd $HOME/ros2_sdk
@@ -137,17 +135,6 @@ sudo rosdep init
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys "console_bridge fastcdr fastrtps libopensplice67 rti-connext-dds-5.3.1 urdfdom_headers"
 colcon build --symlink-install
-```
-
-## ORB_SLAM2_ROS_2
-
-``` bash
-mkdir -p $HOME/ws/src && cd $HOME/ws/src
-git clone https://github.com/mirellameelo/ORB_SLAM2_ROS_2.git
-git clone -b ros2 https://github.com/ros-perception/vision_opencv.git src/vision_opencv
-git clone https://github.com/ros2/message_filters src/message_filters
-source $HOME/ros2_sdk/install/setup.sh 
-colcon build
 ```
 
 ## ORB_SLAM2
@@ -181,6 +168,17 @@ make -j
 make install
 ```
 
+
+## ORB_SLAM2_ROS_2
+
+``` bash
+mkdir -p $HOME/ws/src && cd $HOME/ws/src
+git clone https://github.com/mirellameelo/ORB_SLAM2_ROS_2.git
+git clone -b ros2 https://github.com/ros-perception/vision_opencv.git src/vision_opencv
+git clone https://github.com/ros2/message_filters src/message_filters
+source $HOME/ros2_sdk/install/setup.sh 
+colcon build
+```
 
 ## Set the environment
 
