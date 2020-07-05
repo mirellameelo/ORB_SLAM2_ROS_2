@@ -5,7 +5,7 @@
 
 ## Dependecies
 
-- Eigen 3.2 (upper versions bring up incompatibilities)
+- Eigen 3.2 **(upper versions bring up incompatibilities)**
 - OpenCV
 - ROS 2 (dashing)
 - ORB_SLAM2
@@ -15,17 +15,6 @@
 ##### General dependencies
 
 The following dependencies eventually will be necessary. You can install then as you need, or just run the command:
-
-```bash 
-sudo apt-get update && sudo apt-get install -y \
-	build-essential \
-	git \
-	wget \
-	curl \
-	vim \
-	nano \
-	cmake 
-```	
 
 ```bash 
 sudo apt-get install -y \
@@ -77,66 +66,7 @@ sudo make install
 ```
 
 ## ROS 2
-
-```bash
-sudo locale-gen en_US en_US.UTF-8
-sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-export LANG=en_US.UTF-8
-```
-
-```bash
-sudo apt update && sudo apt install curl gnupg2 lsb-release
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-```
-
-```bash
-sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
-```
-
-wget, python-rosdep, python3-pip, build-essential, cmake and git are necessary. If you had jumped "general dependencies" section, please, add them in the following command. 
-  
- 
-```bash
-sudo apt update && sudo apt install -y \
-	python3-colcon-common-extensions \
-	python3-vcstool
-```
-  
-``` bash
-python3 -m pip install -U \
-	pytest \
-	pytest-cov \
-	pytest-runner \
-	setuptools \
-	argcomplete \
-	flake8 \
-	flake8-blind-except \
-	flake8-builtins \
-	flake8-class-newline \
-	flake8-comprehensions \
-	flake8-deprecated \
-	flake8-docstrings \
-	flake8-import-order \
-	flake8-quotes \
-	pytest-repeat \
-	pytest-rerunfailures
-```
-
-```bash
-sudo apt install --no-install-recommends -y \
-	libasio-dev \
-	libtinyxml2-dev
-```
-
-```bash
-mkdir -p $HOME/ros2_sdk/src && cd $HOME/ros2_sdk
-wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
-vcs import src < ros2.repos
-sudo rosdep init
-rosdep update
-rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys "console_bridge fastcdr fastrtps libopensplice67 rti-connext-dds-5.3.1 urdfdom_headers"
-colcon build --symlink-install
-```
+[Dashing version](https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Install-Debians/)
 
 
 ## ORB_SLAM2_ROS2 
@@ -148,7 +78,7 @@ git clone -b ros2 https://github.com/ros-perception/vision_opencv.git src/vision
 git clone https://github.com/ros2/message_filters src/message_filters
 ```
 
-Before executing the following commands, execute all the "ORB_SLAM2" section.
+**BEFORE** executing the following commands, execute all the "ORB_SLAM2" section.
 
 ``` bash
 source $HOME/ros2_sdk/install/setup.sh 
